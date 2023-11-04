@@ -21,3 +21,12 @@ jobs:
         with:
           name: dist
           path: dist
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download code
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
+      - name: output contents
+        run: ls
