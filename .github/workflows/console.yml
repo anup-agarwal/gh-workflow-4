@@ -8,3 +8,9 @@ jobs:
     steps:
       - name: logging list of files
         run: ls
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: logging again
+        run: ls
